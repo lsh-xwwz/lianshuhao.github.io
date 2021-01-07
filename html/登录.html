@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Pharmacy登入</title>
+    <link rel="stylesheet" href="../css/000/like.css">
+    <link rel="stylesheet" href="../css/登录/登录.css">
+</head>
+<body>
+    <div id="header">
+        <div id="content">
+            <a href="./首页.html">
+                <img src="https://staticfile.azoyacdn.com/web/header-footer/po/pc/images/login-logo_f451e93535.png" alt="">
+            </a>
+            <ul>
+                <li>
+                    <img src="https://staticfile.azoyacdn.com/web/header-footer/po/pc/images/head-1_9711774c8d.png" alt="">
+                    澳洲直邮
+                </li>
+                <li>
+                    <img src="https://staticfile.azoyacdn.com/web/header-footer/po/pc/images/head-2_46471d749f.png" alt="">
+                    便捷支付
+                </li>
+                <li>
+                    <img src="https://staticfile.azoyacdn.com/web/header-footer/po/pc/images/head-3_6bd5acca40.png" alt="">
+                    中文客服
+                </li>
+                <li>
+                    <img src="https://staticfile.azoyacdn.com/web/header-footer/po/pc/images/head-4_f921ae4b42.png" alt="">
+                    正品保证
+                </li>
+            </ul>
+        </div>
+    </div>
+    <div id="main">
+        <div id="container">
+            <div id="warp">
+                <a href="./首页.html">
+                    <img src="https://img-resource.azoyacdn.com/media/dacbd5ac99a8d4c1dfe3e092f8840002/82022/b891400e18b0bca876d14ac2992e1768.jpg" alt="">
+                </a>
+            </div>
+            <form action="../php/regist.php" method="POST">
+                <h3>
+                    <span>用户登录</span>
+                    <a href="./注册.html">
+                        <span>立即注册</span>
+                        <i></i>
+                    </a>
+                </h3>
+                <p class="p1"></p>
+                <div>
+                    <i class="iconfont icon-ren"></i>
+                    <input type="text" id="text" placeholder="手机号/邮箱">
+                </div>
+                <p class="p1"></p>
+                <div>
+                    <i class="iconfont icon-suo"></i>
+                    <input type="text" id="pw" placeholder="密码 (6到12位密码,包含数字和字母)">
+                </div>
+                <p class="p1"></p>
+                <p><a href="">忘记密码</a></p>
+                <button id="btn" type="button"><a href="./购物车.html" id="btn2">登录</a></button>
+                <div>
+                    <span>快捷方式登录</span>
+                    <a href="https://graph.qq.com/oauth2.0/show?which=Login&display=pc&response_type=code&redirect_uri=http%3A%2F%2Fspcdp.cdposs.qq.com%2Fauth%2Fcallback&client_id=101477813&state=http%3A%2F%2Fspcdp.cdposs.qq.com%2F"><img src="http://basedata.azoyacdn.com/uploads/basedata/images/fd598b23364e95f373757e068801e2b0.png" alt=""></a>
+                    <a href="https://weibo.com/?sudaref=www.baidu.com&display=0&retcode=6102"><img src="http://basedata.azoyacdn.com/uploads/basedata/images/a8f8396a2af7a07555247dbd906d1a68.png" alt=""></a>
+                    <a href="https://www.alipay.com/"><img src="http://basedata.azoyacdn.com/uploads/basedata/images/005699ef3bb8ec2bba25e1496c45d65b.png" alt=""></a>
+                </div>
+            </form>
+        </div>
+    </div>
+</body>
+</html>
+<script src="../js/public.js"></script>
+<script>
+    var pArr=$qsall('p')
+    text.onchange=function(){
+        focusPhone(this.value,pArr[1])
+    }
+    function focusPhone(str,num){
+        var reg=/^[1-9]\d{10}$/
+        if((!reg.test(str))&&(str!='')){
+            num.innerHTML='*你输入的电话号码不规范'
+            num.style.color='red'
+            return true
+        }else if(str==''){
+            num.innerHTML='*请输入电话号码'
+            num.style.color='red'
+        }else{
+            num.innerHTML=''
+        }
+    }
+
+    btn.onclick=function(){
+        var xhr=new XMLHttpRequest()
+        xhr.open('POST','../php/regist.php')
+        xhr.onload=function(){
+                location.href='./购物车.html'
+        }
+    }
+</script>

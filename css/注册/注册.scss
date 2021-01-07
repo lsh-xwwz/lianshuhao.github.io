@@ -1,0 +1,163 @@
+#header{
+    width: 100%;
+    background-color: #fff;
+    #content{
+        width: 1190px;
+        height: 80px;
+        margin: 0 auto;
+        a{
+            display: block;
+            width: 104px;
+            height: 54px;
+            margin-top: 13px;
+            float: left;
+        }
+        ul{
+            float: right;
+            li{
+                float: left;
+                line-height: 80px;
+                height: 80px;
+                font-size: 14px;
+                img{
+                    margin: 0 6px 0 30px;
+                    vertical-align: middle;
+                }
+            }
+        }
+    }
+}
+#map{
+    width: 100%;
+    background-color: #f5f5f5;
+    overflow: hidden;
+    .mContent{
+        width: 990px;
+        margin: 30px auto;
+        background-color: #fff;
+        box-sizing: border-box;
+        padding: 0 30px 40px;
+        text-align: center;
+        .contentTop{
+            height: 64px;
+            font-size: 12px;
+            color: #999;
+            box-sizing: border-box;
+            padding: 20px 0;
+            border-bottom: 1px solid #ececec;
+            span{
+                &:nth-child(1){
+                    float: left;
+                    height: 24px;
+                    line-height: 24px;
+                    font-size: 16px;
+                    font-weight: 700;
+                    color: #333;
+                }
+                &:nth-child(2){
+                    float: right;
+                    a{
+                        color: #1d6fb8;
+                        font-size: 14px;
+                        i{
+                            font-size: 14px;
+                            color: #1d6fb8;
+                            margin-left: 3px;
+                        }
+                    }
+                }
+            }
+        }
+        .contentBottom{
+            $wh:420px;
+            margin-top: 15px;
+            form{
+                font-size: 0;
+                div{
+                    position: relative;
+                    border: 1px solid #000;
+                    width: $wh;
+                    margin: 0 auto;
+                    i{
+                        position: absolute;
+                        font-size: 12px;
+                        margin-left: 6px;
+                        width: 70px;
+                        text-align-last: justify;
+                        line-height: 46px;
+                        font-weight: 700;
+                    }
+                    input{
+                        width: 280px;
+                        height: 46px;
+                        padding-left: 100px;
+                        padding-right: 40px;
+                    }
+                }
+                span{
+                    display: block;
+                    font-size: 12px;
+                    width: $wh;
+                    margin: 0 auto;
+                    text-align: left;
+                    line-height: 18px;
+                    height: 18px;
+                    margin-bottom: 20px;
+                    p{
+                        display: inline-block;
+                        width: 12px;
+                        height: 12px;
+                        border: 1px solid #000;
+                        margin-right: 10px;
+                        text-align: center;
+                        line-height: 12px;
+                        cursor: pointer;
+                        font-size: 12px;
+                        .borcolor{
+                            border: 1px solid #ff9933;
+                        }
+                        i{
+                            font-size: 12px;
+                            color: #ff9933;
+                            opacity: 0;
+                        }
+                    }
+                }
+                p{
+                    height: 22px;
+                    width: $wh;
+                    display: inline-block;
+                    margin-top: 2px;
+                    font-size: 12px;
+                    text-align: left;
+                }
+                button{
+                    width: 420px;
+                    height: 46px;
+                    background-color:rgba($color: #333, $alpha: 0.5);
+                    cursor: pointer;
+                }
+                #graphics{
+                    position: relative;
+                    span{
+                        position: absolute;
+                        width: 82px;
+                        height: 38px;
+                        background-image: url(https://ss3.bdstatic.com/70cFv8Sh_Q1YnxGkpoWK1HF6hhy/it/u=1742991918,1092566421&fm=26&gp=0.jpg);
+                        background-repeat: no-repeat;
+                        top: 4px;
+                        right: 6px;
+                        cursor: pointer;
+                        box-sizing: border-box;
+                        padding: 8px;
+                    }
+                    input{
+                        width: 220px;
+                        padding-right: 100px;
+                    }
+                }
+            }
+        }
+    }
+}
+

@@ -1,0 +1,31 @@
+*{
+    padding: 0;
+    margin: 0;
+}
+body{
+    min-width: max-content;
+    min-width: -webkit-max-content;
+    color: #000;
+}
+li{
+    list-style: none;
+}
+a{
+    text-decoration: none;
+    color: #000;
+}
+input{
+    border: none;
+    outline: none;
+    border-radius: 0%;
+}
+img{
+    vertical-align: middle;
+}
+button{
+    border: none;
+    outline: none;
+}
+i{
+    font-style: normal;
+}

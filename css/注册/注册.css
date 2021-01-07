@@ -1,0 +1,185 @@
+#header {
+  width: 100%;
+  background-color: #fff;
+}
+
+#header #content {
+  width: 1190px;
+  height: 80px;
+  margin: 0 auto;
+}
+
+#header #content a {
+  display: block;
+  width: 104px;
+  height: 54px;
+  margin-top: 13px;
+  float: left;
+}
+
+#header #content ul {
+  float: right;
+}
+
+#header #content ul li {
+  float: left;
+  line-height: 80px;
+  height: 80px;
+  font-size: 14px;
+}
+
+#header #content ul li img {
+  margin: 0 6px 0 30px;
+  vertical-align: middle;
+}
+
+#map {
+  width: 100%;
+  background-color: #f5f5f5;
+  overflow: hidden;
+}
+
+#map .mContent {
+  width: 990px;
+  margin: 30px auto;
+  background-color: #fff;
+  box-sizing: border-box;
+  padding: 0 30px 40px;
+  text-align: center;
+}
+
+#map .mContent .contentTop {
+  height: 64px;
+  font-size: 12px;
+  color: #999;
+  box-sizing: border-box;
+  padding: 20px 0;
+  border-bottom: 1px solid #ececec;
+}
+
+#map .mContent .contentTop span:nth-child(1) {
+  float: left;
+  height: 24px;
+  line-height: 24px;
+  font-size: 16px;
+  font-weight: 700;
+  color: #333;
+}
+
+#map .mContent .contentTop span:nth-child(2) {
+  float: right;
+}
+
+#map .mContent .contentTop span:nth-child(2) a {
+  color: #1d6fb8;
+  font-size: 14px;
+}
+
+#map .mContent .contentTop span:nth-child(2) a i {
+  font-size: 14px;
+  color: #1d6fb8;
+  margin-left: 3px;
+}
+
+#map .mContent .contentBottom {
+  margin-top: 15px;
+}
+
+#map .mContent .contentBottom form {
+  font-size: 0;
+}
+
+#map .mContent .contentBottom form div {
+  position: relative;
+  border: 1px solid #000;
+  width: 420px;
+  margin: 0 auto;
+}
+
+#map .mContent .contentBottom form div i {
+  position: absolute;
+  font-size: 12px;
+  margin-left: 6px;
+  width: 70px;
+  text-align-last: justify;
+  line-height: 46px;
+  font-weight: 700;
+}
+
+#map .mContent .contentBottom form div input {
+  width: 280px;
+  height: 46px;
+  padding-left: 100px;
+  padding-right: 40px;
+}
+
+#map .mContent .contentBottom form span {
+  display: block;
+  font-size: 12px;
+  width: 420px;
+  margin: 0 auto;
+  text-align: left;
+  line-height: 18px;
+  height: 18px;
+  margin-bottom: 20px;
+}
+
+#map .mContent .contentBottom form span p {
+  display: inline-block;
+  width: 12px;
+  height: 12px;
+  border: 1px solid #000;
+  margin-right: 10px;
+  text-align: center;
+  line-height: 12px;
+  cursor: pointer;
+  font-size: 12px;
+}
+
+#map .mContent .contentBottom form span p .borcolor {
+  border: 1px solid #ff9933;
+}
+
+#map .mContent .contentBottom form span p i {
+  font-size: 12px;
+  color: #ff9933;
+  opacity: 0;
+}
+
+#map .mContent .contentBottom form p {
+  height: 22px;
+  width: 420px;
+  display: inline-block;
+  margin-top: 2px;
+  font-size: 12px;
+  text-align: left;
+}
+
+#map .mContent .contentBottom form button {
+  width: 420px;
+  height: 46px;
+  background-color: rgba(51, 51, 51, 0.5);
+  cursor: pointer;
+}
+
+#map .mContent .contentBottom form #graphics {
+  position: relative;
+}
+
+#map .mContent .contentBottom form #graphics span {
+  position: absolute;
+  width: 82px;
+  height: 38px;
+  background-image: url(https://ss3.bdstatic.com/70cFv8Sh_Q1YnxGkpoWK1HF6hhy/it/u=1742991918,1092566421&fm=26&gp=0.jpg);
+  background-repeat: no-repeat;
+  top: 4px;
+  right: 6px;
+  cursor: pointer;
+  box-sizing: border-box;
+  padding: 8px;
+}
+
+#map .mContent .contentBottom form #graphics input {
+  width: 220px;
+  padding-right: 100px;
+}

@@ -1,0 +1,14 @@
+table th{
+    width: 180px;
+}
+tbody td{
+    text-align: center;
+}
+tbody td:nth-child(3) img{
+    margin-left: 60px;
+}
+tbody td:nth-child(6) button{
+    width: 73px;
+    height: 40px;
+    background-color: red;
+}

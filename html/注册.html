@@ -1,0 +1,201 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>注册</title>
+    <link rel="stylesheet" href="../css/000/public.css">
+    <link rel="stylesheet" href="../css/注册/注册.css">
+    <link rel="stylesheet" href="../css/000/iconfont.css">
+</head>
+<body>
+    <div id="header">
+        <div id="content">
+            <a href="./首页.html">
+                <img src="https://staticfile.azoyacdn.com/web/header-footer/po/pc/images/login-logo_f451e93535.png" alt="">
+            </a>
+            <ul>
+                <li>
+                    <img src="https://staticfile.azoyacdn.com/web/header-footer/po/pc/images/head-1_9711774c8d.png" alt="">
+                    澳洲直邮
+                </li>
+                <li>
+                    <img src="https://staticfile.azoyacdn.com/web/header-footer/po/pc/images/head-2_46471d749f.png" alt="">
+                    便捷支付
+                </li>
+                <li>
+                    <img src="https://staticfile.azoyacdn.com/web/header-footer/po/pc/images/head-3_6bd5acca40.png" alt="">
+                    中文客服
+                </li>
+                <li>
+                    <img src="https://staticfile.azoyacdn.com/web/header-footer/po/pc/images/head-4_f921ae4b42.png" alt="">
+                    正品保证
+                </li>
+            </ul>
+        </div>
+    </div>
+    <div id="map">
+        <div class="mContent">
+            <div class="contentTop">
+                <span>欢迎注册</span>
+                <span>我已注册, 现在就 <a href="./登录.html"> 登录<i class="iconfont icon-next-s"></i></a></span>
+            </div>
+            <div class="contentBottom">
+                <form action="../php/login.php" method="POST">
+                    <p></p>
+                    <div>
+                        <i>手机号码</i>
+                        <input type="text" placeholder="请填写常用手机号码" id="phone" autocomplete="off">
+                    </div>
+                    <p></p>
+                    <div id="graphics">
+                        <i>图形验证码</i>
+                        <input type="text" placeholder="请输入验证码" id="yz" autocomplete="off">
+                        <span id="yzm"></span>
+                    </div>
+                    <p></p>
+                    <div>
+                        <i>身份证</i>
+                        <input type="text" placeholder="请输入身份证" id="sname" autocomplete="off" name="na">
+                    </div>
+                    <p></p>
+                    <div>
+                        <i>登录密码</i>
+                        <input type="password" placeholder="6-12位字符，由数字和字母组成" id="password" autocomplete="off">
+                    </div>
+                    <p></p>
+                    <div>
+                        <i>确认密码</i>
+                        <input type="password" placeholder="请确认密码" id="pas" autocomplete="off" name="pw">
+                    </div>
+                    <p></p>
+                    <span><p id="checkbox"><i class="iconfont icon-icon-test" id="i"></i></p>是的,我已阅读并同意<a href="">《服务条款》</a>及<a href="">《隐私条款》</a></span>
+                    <button id="btn" disabled='disabled' type="button">立即注册</button>
+                </form>
+            </div>
+        </div>
+    </div>
+</body>
+</html>
+<script src="../js/public.js"></script>
+<script src="../js/jquery.min.js"></script>
+<script>
+    var pArr=$qsall('p')
+
+    //手机号码
+    phone.onchange=function(){
+        focusPhone(this.value,pArr[1])
+    }
+    function focusPhone(str,num){
+        var reg=/^[1-9]\d{10}$/
+        if((!reg.test(str))&&(str!='')){
+            num.innerHTML='*你输入的电话号码不规范'
+            num.style.color='red'
+            return true
+        }else if(str==''){
+            num.innerHTML='*请输入电话号码'
+            num.style.color='red'
+        }else{
+            num.innerHTML=''
+        }
+    }
+
+    //图形验证码
+    function randChar(n){
+        var str=''
+        for(var i=0;i<n;i++){	
+          var code = rand(48,122)
+          if((code>57&&code<65)||(code>90&&code<97)){
+            i--; 
+          }else{
+            var char = String.fromCharCode(code);
+            str+=char;
+          }
+        }
+        return str;
+    }
+    yzm.innerHTML=randChar(6)
+    yzm.onclick=function(){
+        yzm.innerHTML=randChar(6)
+    }
+    function focusyzm(str,num){
+        if((str!=yzm.innerHTML)&&(str!='')){
+          num.innerHTML='*你输入的验证码不正确'
+          num.style.color='red'
+        }else if(str==''){
+            num.innerHTML='*请输入验证码'
+            num.style.color='red'
+        }else{
+            num.innerHTML=null
+        }
+    }
+    yz.onchange=function(){
+        focusyzm(this.value,pArr[2])
+    }
+
+    //身份证
+    sname.onchange=function(){
+        focusSname(this.value,pArr[3])
+    }
+    function focusSname(str,num){
+        var reg=/^([1-9]\d{16}(\d|x))$/
+        if((!reg.test(str))&&(str!='')){
+            num.innerHTML='*你输入的身份证不规范'
+            num.style.color='red'
+        }else if(str==''){
+            num.innerHTML='*请输入身份证'
+            num.style.color='red'
+        }else{
+            num.innerHTML=''
+        }
+    }
+
+    //密码
+    password.onchange=function(){
+        focusPw(this.value,pArr[4])
+    }
+    function focusPw(str,num){
+        var reg=/^\w{6,12}$/
+        if((!reg.test(str))&&(str!='')){
+            num.innerHTML='*请按要求设置密码'
+            num.style.color='red'
+        }else if(str==''){
+            num.innerHTML='*请设置密码'
+            num.style.color='red'
+        }else{
+            num.innerHTML=''
+        }
+    }
+
+    //确认密码
+    pas.onchange=function(){
+        focusQpwd(this.value,pArr[5])
+    }
+    function focusQpwd(str,num){
+      if((!(str==password.value))&&(str!='')){
+        num.innerHTML='*两次输入密码不一致'
+        num.style.color='red'
+      }else if(str==''){
+        num.innerHTML='请确认密码'
+        num.style.color='red'
+      }else if(str==password.value){
+        num.innerHTML=''
+      }
+    }
+    
+    checkbox.onclick=function(){
+        i.style.opacity='1'
+        checkbox.style.borderColor=' #ff9933'
+        $('#btn').removeAttr("disabled")
+        btn.style.backgroundColor=' #ff9933'
+    }
+
+    btn.onclick=function(){
+        var xhr=new XMLHttpRequest()
+        xhr.open('post','../php/login.php')
+        xhr.onload=function(){
+            alert('注册成功')
+        }
+       xhr.send()
+    }
+</script>
